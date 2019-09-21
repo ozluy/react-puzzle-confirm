@@ -127,7 +127,7 @@ function ReactPuzzleConfirm(_ref) {
     }
   }, "close"), _react.default.createElement("button", {
     className: "react-puzzle-confirm-button",
-    disabled: isFailed,
+    disabled: !isFailed,
     onClick: function onClick() {
       setRandomValue(randomValueCreator());
       setValue(0);

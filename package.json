@@ -1,9 +1,10 @@
 {
   "name": "react-puzzle-confirm",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "React confirm modal, by fitting puzzle piece",
   "author": "Yusuf Özlü",
   "license": "ISC",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ozluy/react-puzzle-confirm.git"
