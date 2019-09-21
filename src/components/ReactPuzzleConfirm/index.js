@@ -97,7 +97,7 @@ function ReactPuzzleConfirm({
           </button>
           <button
             className='react-puzzle-confirm-button'
-            disabled={isFailed}
+            disabled={!isFailed}
             onClick={() => {
               setRandomValue(randomValueCreator())
               setValue(0)
