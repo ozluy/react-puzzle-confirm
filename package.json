@@ -1,0 +1,64 @@
+{
+  "name": "react-puzzle-confirm",
+  "version": "1.0.0",
+  "description": "React confirm modal, by fitting puzzle piece",
+  "author": "Yusuf Özlü",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozluy/react-puzzle-confirm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ozluy/react-puzzle-confirm/issues"
+  },
+  "homepage": "https://github.com/ozluy/react-puzzle-confirm#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "node-sass": "^4.12.0"
+  },
+  "keywords": [
+    "react",
+    "puzzle",
+    "confirm",
+    "i-am-not-robot",
+    "react-puzzle"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postbuild": "npm run styles",
+    "styles": "node-sass src/components/ReactPuzzleConfirm/index.scss react-puzzle-confirm.css",
+    "npm-publish": "./node_modules/.bin/babel src/components/ReactPuzzleConfirm --out-file index.js"
+    
+ 
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
