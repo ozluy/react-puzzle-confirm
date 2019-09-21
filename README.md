@@ -68,7 +68,7 @@ For older versions of React ^15.0.0 please install following version with tag `r
 
 -->
 
-<a href="https://paypal.me/ozluy"> <img src="https://github.com/ozluy/react-sripe-script-loader/blob/master/buy-me-a-coffee-with-paypal.png" /></a>
+<a href="https://paypal.me/ozluy"> <img src="https://github.com/ozluy/react-stripe-script-loader/blob/master/buy-me-a-coffee-with-paypal.png" /></a>
 
 Thanks
 
