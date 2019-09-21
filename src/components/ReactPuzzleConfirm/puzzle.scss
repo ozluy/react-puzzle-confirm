@@ -1,0 +1,205 @@
+$green: #093545;
+$black: #03060b;
+$navy: #1d0f77;
+$darkgreen: #03060b;
+$secondary: #3149b1;
+$green: #093545;
+$yellow: #e6ba20;
+$blue: #8dc6ff;
+$red: #f25d5c;
+$disabled: #c7cad6;
+$primary: #48525b;
+$headline: #92a2b2;
+$white: #ffffff;
+$shape: rgba(209, 61, 61, 0.1);
+
+.puzzle__bg {
+  background-image: url(./bg.png);
+  background-repeat: repeat-x;
+  background-size: 240px 100px;
+  background-color: $green;
+}
+
+.react-puzzle-confirm {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  * {
+    box-sizing: border-box;
+  }
+
+  &-state {
+    font-size: 12px;
+    color: $yellow;
+    &--fail {
+      color: $red;
+    }
+  }
+  &-flash {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 1px;
+    background-color: yellow;
+    box-shadow: 0 0 30px 10px yellow;
+    position: absolute;
+    z-index: 5;
+    left: 100%;
+    transition: left 1s ease-in-out;
+    opacity: 0;
+
+    &.flash--me {
+      left: 0;
+      right: auto;
+      opacity: 0.6;
+    }
+  }
+  &-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &-title {
+    font-size: 15px;
+    color: $primary;
+    margin: 0;
+    font-weight: 500;
+    font-style: bolder;
+    padding: 10px 0;
+  }
+  &-body {
+    background-color: white;
+  }
+  &-puzzle-wrapper {
+    width: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  &-slider-note {
+    width: 240px;
+    margin: 0 auto;
+    color: $headline;
+    font-size: 12px;
+  }
+  &-puzzle {
+    @extend .puzzle__bg;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    background-position: 0 0;
+  }
+  &-puzzle-missing-piece {
+    @extend .puzzle__bg;
+    height: 48px;
+    width: 48px;
+    top: 15px;
+    position: absolute;
+    background-color: $green;
+    z-index: 3;
+    border: solid 1px $darkgreen;
+    box-shadow: inset 0 0 5px $primary;
+    background-position-y: -16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-color: $green;
+      border-right: solid 1px $darkgreen;
+      bottom: 50%;
+      right: -14px;
+      box-shadow: inset -1px 0 2px -1px $darkgreen;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-color: $green;
+      border-top: solid 1px $darkgreen;
+      bottom: -4px;
+      left: 45%;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    &.missing-piece-placeholder {
+      background-color: $darkgreen;
+      border-color: transparent;
+      box-shadow: inset 0 0 15px $black;
+      z-index: 2;
+      background-image: none;
+
+      &::before {
+        background-color: $darkgreen;
+        border-color: $primary;
+      }
+      &::after {
+        border-color: $black;
+      }
+    }
+  }
+  &-puzzle__bg-shape {
+    width: 100%;
+    height: 25%;
+    top: 37.5px;
+    left: 0;
+    position: absolute;
+    background-color: $shape;
+    z-index: 2;
+  }
+
+  &-button-group {
+    padding: 8px 0 8px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  &-button {
+    padding: 5px 10px;
+    outline: none !important;
+    background: $green;
+    color: $white;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    font-style: bolder;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: solid 1px $green;
+
+    &:hover {
+      opacity: 0.9;
+    }
+    &--secondary {
+      background: $white;
+      color: $green;
+    }
+    &:disabled {
+      color: $white !important;
+      background-color: $disabled !important;
+      border: none;
+    }
+  }
+}
