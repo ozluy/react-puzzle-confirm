@@ -34,9 +34,16 @@ import 'react-puzzle-confirm/eact-puzzle-confirm.css'
 
 const Demo = () => (
   <ReactPuzzleConfirm
-    onSuccess={() => console.log('success')}
-    onFail={() => console.log('fail')}
-    onClose={() => () => console.log('close clicked')}
+     onClose={() => setShowModal(false)}
+     onSuccess={() => setShowModal(false)}
+     onFail={() => console.log("failed")}
+     title="Please fit the puzzle piece carefully"
+     sliderTitle="Slide to complete the puzzle"
+     failMessage="Error"
+     successMessage="Success"
+     closeButtonLabel="Close"
+     refrefButtonLabel="Refresh"
+     disableRefreshIdleState={false}
   />
 )
 
@@ -45,20 +52,44 @@ export default Demo
 
 # props
 
-#### onSuccess `string`
+#### onSuccess `function`
 
-`onSuccess = () => console.log('success')`
+default `() => console.log('success')`
+
 function for successful attempt
 
-#### onFail `string`
+#### onFail `function`
 
-`onFail = () => console.log('fail')`
+default `() => console.log('fail')`
+
 function for failed attempt
 
-#### onClose `ReactElement`
+#### onClose `function`
 
-`onClose = () => console.log('close clicked')`
-function Close button click
+default `() => console.log('close clicked')`
+
+function for close button click
+
+### title `string`
+default `"Please fit the puzzle piece carefully"`
+
+###    sliderTitle `string`
+default `"Slide to complete the puzzle"`
+
+###    failMessage `string`
+default`"Error"`
+
+###    successMessage `string`
+default`"Success"`
+
+###    closeButtonLabel `string`
+default`"Close"`
+
+###    refrefButtonLabel `string`
+default `"Refresh"`
+
+###    disableRefreshIdleState `boolean`
+default `true`
 
  <!--- 
  important note
