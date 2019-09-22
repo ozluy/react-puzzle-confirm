@@ -95,7 +95,7 @@ function ReactPuzzleConfirm({
         <div className='react-puzzle-confirm-button-group'>
           <button
             className='react-puzzle-confirm-button react-puzzle-confirm-button--secondary'
-            onClick={() => onClose}
+            onClick={onClose}
           >
             {closeButtonLabel}
           </button>

@@ -134,9 +134,7 @@ function ReactPuzzleConfirm(_ref) {
     className: "react-puzzle-confirm-button-group"
   }, _react.default.createElement("button", {
     className: "react-puzzle-confirm-button react-puzzle-confirm-button--secondary",
-    onClick: function onClick() {
-      return onClose;
-    }
+    onClick: onClose
   }, closeButtonLabel), _react.default.createElement("button", {
     className: "react-puzzle-confirm-button",
     disabled: !isFailed && disableRefreshIdleState,
