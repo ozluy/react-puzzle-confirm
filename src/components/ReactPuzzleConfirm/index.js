@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 function ReactPuzzleConfirm({
-  minValue = 6,
-  maxValue = 36,
-  multiplier = 5,
   onSuccess = () => console.log('success'),
   onFail = () => console.log('fail'),
   onClose = () => console.log('close clicked'),
 }) {
+  const minValue = 6
+  const maxValue = 36
+  const multiplier = 5
   const randomValueCreator = () => {
     const min = Math.ceil(minValue)
     const max = Math.floor(maxValue)

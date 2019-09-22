@@ -20,13 +20,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function ReactPuzzleConfirm(_ref) {
-  var _ref$minValue = _ref.minValue,
-      minValue = _ref$minValue === void 0 ? 6 : _ref$minValue,
-      _ref$maxValue = _ref.maxValue,
-      maxValue = _ref$maxValue === void 0 ? 36 : _ref$maxValue,
-      _ref$multiplier = _ref.multiplier,
-      multiplier = _ref$multiplier === void 0 ? 5 : _ref$multiplier,
-      _ref$onSuccess = _ref.onSuccess,
+  var _ref$onSuccess = _ref.onSuccess,
       onSuccess = _ref$onSuccess === void 0 ? function () {
     return console.log('success');
   } : _ref$onSuccess,
@@ -38,6 +32,9 @@ function ReactPuzzleConfirm(_ref) {
       onClose = _ref$onClose === void 0 ? function () {
     return console.log('close clicked');
   } : _ref$onClose;
+  var minValue = 6;
+  var maxValue = 36;
+  var multiplier = 5;
 
   var randomValueCreator = function randomValueCreator() {
     var min = Math.ceil(minValue);
