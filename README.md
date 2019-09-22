@@ -91,15 +91,19 @@ default `"Refresh"`
 ###    disableRefreshIdleState `boolean`
 default `true`
 
- <!--- 
+
  important note
 ===
 
-For older versions of React ^15.0.0 please install following version with tag `react-version-15`
+For older versions of React  15.0.0 and above (^15.0.0) please install following version with tag `react-v15.0.0` or `1.0.16`
+ 
+ `npm install react-puzzle-confirm@react-v15.0.0 -S`
 
- `npm install react-puzzle-confirm@react-version-15 -S`
+ or 
 
--->
+`npm install react-puzzle-confirm@1.0.16 -S`
+
+
 
 <a href="https://paypal.me/ozluy"> <img src="https://github.com/ozluy/react-stripe-script-loader/blob/master/buy-me-a-coffee-with-paypal.png" /></a>
 
