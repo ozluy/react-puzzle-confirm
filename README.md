@@ -5,8 +5,8 @@
 # dependencies
 
 ```json
- "react": "^16.9.0",
- "react-dom": "^16.9.0"
+ "react": "15.0.0",
+ "react-dom": "15.0.0"
 ```
 
 <img width="500" src="https://github.com/ozluy/react-puzzle-confirm/blob/master/react-puzzle.gif" />
