@@ -105,16 +105,58 @@ $shape: rgba(209, 61, 61, 0.1);
     background-position: 0 0;
   }
   &-puzzle-missing-piece {
-    @extend .puzzle__bg;
     height: 48px;
     width: 48px;
     top: 15px;
     position: absolute;
-    background-color: $green;
     z-index: 3;
     border: solid 1px $darkgreen;
-    box-shadow: inset 0 0 5px $primary;
-    background-position-y: -16px;
+    border-bottom-color: transparent;
+
+    &-main {
+      @extend .puzzle__bg;
+      top: 0;
+      width: 100%;
+      background-position-y: -16px;
+      height: 32px;
+    }
+    &-left {
+      position: absolute;
+      height: 17px;
+      bottom: -1px;
+      left: 0;
+      background-color: $green;
+      border-bottom: solid 1px $darkgreen;
+      width: 22px;
+      z-index: 3;
+    }
+    &-right {
+      height: 17px;
+      bottom: -1px;
+      position: absolute;
+      width: 8px;
+      right: 0;
+      background-color: $green;
+      border-bottom: solid 1px $darkgreen;
+      z-index: 3;
+
+    }
+    &-circle {
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      bottom: -9px;
+      right: 3px;
+      border: solid $green;
+      border-width: 5px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      z-index: 2;
+      
+      
+      box-sizing: content-box;
+
+    }
 
     &::before {
       content: '';
@@ -135,10 +177,10 @@ $shape: rgba(209, 61, 61, 0.1);
       position: absolute;
       height: 16px;
       width: 16px;
-      background-color: $green;
-      border-top: solid 1px $darkgreen;
+      background-color:transparent;
       bottom: -4px;
-      left: 45%;
+      right: 8px;
+      border-top: solid 1px $darkgreen;
       border-radius: 50%;
       z-index: 4;
     }
@@ -156,6 +198,10 @@ $shape: rgba(209, 61, 61, 0.1);
       }
       &::after {
         border-color: $black;
+        background-color: $green;
+        height: 16px;
+        width: 16px;
+        border: none;
       }
     }
   }

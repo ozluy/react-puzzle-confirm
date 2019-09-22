@@ -56,9 +56,18 @@ function ReactPuzzleConfirm({
                 className='react-puzzle-confirm-puzzle-missing-piece'
                 style={{
                   left: `${value * multiplier}px`,
-                  backgroundPositionX: -randomValue * multiplier - 1 / 2,
                 }}
-              />
+              >
+                <div
+                  className='react-puzzle-confirm-puzzle-missing-piece-main'
+                  style={{
+                    backgroundPositionX: -randomValue * multiplier - 1 / 2,
+                  }}
+                />
+                <div className='react-puzzle-confirm-puzzle-missing-piece-left' />
+                <div className='react-puzzle-confirm-puzzle-missing-piece-right' />
+                <div className='react-puzzle-confirm-puzzle-missing-piece-circle' />
+              </div>
               <div
                 className='react-puzzle-confirm-puzzle-missing-piece missing-piece-placeholder'
                 style={{ left: `${randomValue * multiplier}px` }}
