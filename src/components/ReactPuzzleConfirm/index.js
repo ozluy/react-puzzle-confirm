@@ -4,6 +4,13 @@ function ReactPuzzleConfirm({
   onSuccess = () => console.log('success'),
   onFail = () => console.log('fail'),
   onClose = () => console.log('close clicked'),
+  title = 'Please fit the puzzle piece carefully',
+  sliderTitle = 'Slide to complete the puzzle',
+  failMessage = 'Error',
+  successMessage = 'Success',
+  closeButtonLabel = 'Close',
+  refrefButtonLabel = 'Refresh',
+  disableRefreshIdleState = true,
 }) {
   const minValue = 6
   const maxValue = 36
@@ -31,13 +38,12 @@ function ReactPuzzleConfirm({
   }
 
   const isFailed = status === 'Failed'
+  const statusMessage = isFailed ? failMessage : successMessage
 
   return (
     <div className='react-puzzle-confirm-modal'>
       <div className='react-puzzle-confirm'>
-        <h1 className='react-puzzle-confirm-title'>
-          Please fit the puzzle piece carefully
-        </h1>
+        <h1 className='react-puzzle-confirm-title'>{title}</h1>
         <div className='react-puzzle-confirm-body'>
           <div className='react-puzzle-confirm-puzzle-wrapper'>
             <div className='react-puzzle-confirm-puzzle'>
@@ -75,9 +81,7 @@ function ReactPuzzleConfirm({
             min='0'
             max={maxValue}
           />
-          <div className='react-puzzle-confirm-slider-note'>
-            Slide to complete the puzzle
-          </div>
+          <div className='react-puzzle-confirm-slider-note'>{sliderTitle}</div>
         </div>
 
         <div
@@ -85,7 +89,7 @@ function ReactPuzzleConfirm({
             isFailed ? 'react-puzzle-confirm-state--fail' : ''
           }`}
         >
-          &nbsp; {status !== 'Idle' && status}
+          &nbsp; {status !== 'Idle' && statusMessage}
         </div>
 
         <div className='react-puzzle-confirm-button-group'>
@@ -93,18 +97,18 @@ function ReactPuzzleConfirm({
             className='react-puzzle-confirm-button react-puzzle-confirm-button--secondary'
             onClick={() => onClose}
           >
-            close
+            {closeButtonLabel}
           </button>
           <button
             className='react-puzzle-confirm-button'
-            disabled={!isFailed}
+            disabled={!isFailed && disableRefreshIdleState}
             onClick={() => {
               setRandomValue(randomValueCreator())
               setValue(0)
               setStatus('Idle')
             }}
           >
-            refresh
+            {refrefButtonLabel}
           </button>
         </div>
       </div>

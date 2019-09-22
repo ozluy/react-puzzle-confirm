@@ -1,6 +1,6 @@
 {
   "name": "react-puzzle-confirm",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "React confirm modal, by fitting puzzle piece",
   "author": "Yusuf Özlü",
   "license": "ISC",
@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/ozluy/react-puzzle-confirm/issues"
   },
-  "homepage": "https://github.com/ozluy/react-puzzle-confirm#readme",
+  "homepage": "http://ozluy.github.io/projects/react-puzzle-confirm/",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",

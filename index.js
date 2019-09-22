@@ -31,7 +31,21 @@ function ReactPuzzleConfirm(_ref) {
       _ref$onClose = _ref.onClose,
       onClose = _ref$onClose === void 0 ? function () {
     return console.log('close clicked');
-  } : _ref$onClose;
+  } : _ref$onClose,
+      _ref$title = _ref.title,
+      title = _ref$title === void 0 ? 'Please fit the puzzle piece carefully' : _ref$title,
+      _ref$sliderTitle = _ref.sliderTitle,
+      sliderTitle = _ref$sliderTitle === void 0 ? 'Slide to complete the puzzle' : _ref$sliderTitle,
+      _ref$failMessage = _ref.failMessage,
+      failMessage = _ref$failMessage === void 0 ? 'Error' : _ref$failMessage,
+      _ref$successMessage = _ref.successMessage,
+      successMessage = _ref$successMessage === void 0 ? 'Success' : _ref$successMessage,
+      _ref$closeButtonLabel = _ref.closeButtonLabel,
+      closeButtonLabel = _ref$closeButtonLabel === void 0 ? 'Close' : _ref$closeButtonLabel,
+      _ref$refrefButtonLabe = _ref.refrefButtonLabel,
+      refrefButtonLabel = _ref$refrefButtonLabe === void 0 ? 'Refresh' : _ref$refrefButtonLabe,
+      _ref$disableRefreshId = _ref.disableRefreshIdleState,
+      disableRefreshIdleState = _ref$disableRefreshId === void 0 ? true : _ref$disableRefreshId;
   var minValue = 6;
   var maxValue = 36;
   var multiplier = 5;
@@ -71,13 +85,14 @@ function ReactPuzzleConfirm(_ref) {
   };
 
   var isFailed = status === 'Failed';
+  var statusMessage = isFailed ? failMessage : successMessage;
   return _react.default.createElement("div", {
     className: "react-puzzle-confirm-modal"
   }, _react.default.createElement("div", {
     className: "react-puzzle-confirm"
   }, _react.default.createElement("h1", {
     className: "react-puzzle-confirm-title"
-  }, "Please fit the puzzle piece carefully"), _react.default.createElement("div", {
+  }, title), _react.default.createElement("div", {
     className: "react-puzzle-confirm-body"
   }, _react.default.createElement("div", {
     className: "react-puzzle-confirm-puzzle-wrapper"
@@ -113,24 +128,24 @@ function ReactPuzzleConfirm(_ref) {
     max: maxValue
   }), _react.default.createElement("div", {
     className: "react-puzzle-confirm-slider-note"
-  }, "Slide to complete the puzzle")), _react.default.createElement("div", {
+  }, sliderTitle)), _react.default.createElement("div", {
     className: "react-puzzle-confirm-state ".concat(isFailed ? 'react-puzzle-confirm-state--fail' : '')
-  }, "\xA0 ", status !== 'Idle' && status), _react.default.createElement("div", {
+  }, "\xA0 ", status !== 'Idle' && statusMessage), _react.default.createElement("div", {
     className: "react-puzzle-confirm-button-group"
   }, _react.default.createElement("button", {
     className: "react-puzzle-confirm-button react-puzzle-confirm-button--secondary",
     onClick: function onClick() {
       return onClose;
     }
-  }, "close"), _react.default.createElement("button", {
+  }, closeButtonLabel), _react.default.createElement("button", {
     className: "react-puzzle-confirm-button",
-    disabled: !isFailed,
+    disabled: !isFailed && disableRefreshIdleState,
     onClick: function onClick() {
       setRandomValue(randomValueCreator());
       setValue(0);
       setStatus('Idle');
     }
-  }, "refresh"))));
+  }, refrefButtonLabel))));
 }
 
 var _default = ReactPuzzleConfirm;
