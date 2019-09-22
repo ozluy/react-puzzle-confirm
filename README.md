@@ -17,6 +17,8 @@
 
 <a target="_blank" rel="noopener noreferrer" href="http://ozluy.github.io/projects/react-puzzle-confirm"> Demo </a>
 
+<a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/react-puzzle-confirm-fsdcf"> Code Sandbox </a>
+
 # install
 
 Install as a node module
@@ -41,7 +43,7 @@ const Demo = () => (
 export default Demo
 ```
 
-===
+# props
 
 #### onSuccess `string`
 
