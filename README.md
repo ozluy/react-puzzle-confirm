@@ -30,7 +30,7 @@ Install as a node module
 ```jsx
 import React from 'react'
 import ReactPuzzleConfirm from 'react-puzzle-confirm'
-import 'react-puzzle-confirm/eact-puzzle-confirm.css'
+import 'react-puzzle-confirm/react-puzzle-confirm.css'
 
 const Demo = () => (
   <ReactPuzzleConfirm
@@ -39,11 +39,11 @@ const Demo = () => (
      onFail={() => console.log("failed")}
      title="Please fit the puzzle piece carefully"
      sliderTitle="Slide to complete the puzzle"
-     failMessage="Error"
+     failMessage="Failed"
      successMessage="Success"
      closeButtonLabel="Close"
      refrefButtonLabel="Refresh"
-     disableRefreshIdleState={false}
+     disableRefreshIdleState={true}
   />
 )
 
