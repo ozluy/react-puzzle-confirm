@@ -1,6 +1,8 @@
 # React Puzzle Confirm
 
 [![npm version](https://badge.fury.io/js/react-puzzle-confirm.svg)](https://badge.fury.io/js/react-puzzle-confirm)
+![npm download](https://img.shields.io/npm/dt/react-puzzle-confirm.svg)
+
 
 # dependencies
 
