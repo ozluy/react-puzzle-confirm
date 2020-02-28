@@ -3,6 +3,8 @@
 [![npm version](https://badge.fury.io/js/react-puzzle-confirm.svg)](https://badge.fury.io/js/react-puzzle-confirm)
 ![npm download](https://img.shields.io/npm/dt/react-puzzle-confirm.svg)
 
+Posted on [React Status](https://react.statuscode.com/issues/157) 🔥🔥🔥
+
 
 # dependencies
 
